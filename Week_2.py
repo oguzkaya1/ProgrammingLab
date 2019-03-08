@@ -12,7 +12,7 @@ def my_search_selection(my_array):
         swap_count=swap_count+1
     print("number of exchange :",swap_count)
     return
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def my_binary_search(my_sorted_array,item):
     first=0
     last=len(my_sorted_array)-1
@@ -30,7 +30,7 @@ def my_binary_search(my_sorted_array,item):
             else:
                 first=midpoint+1
     return found,midpoint,s
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def fibo_loop(n):
     a,b=0,1
     if(n==0):
@@ -38,31 +38,31 @@ def fibo_loop(n):
     for i in range(n-1):
         a,b=b,a+b
     return b
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def fibo_recursive(n):
     if(n<2):
         return n
     else:
         return fibo_recursive(n-1)+fibo_recursive(n-2)
-------------------------------------------------------------------    
+#------------------------------------------------------------------    
 def factorial(n):
     s=1
     for i in range(1,n+1):
         s=s*i
     return s
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def factorial_recursive(n):
     if(n==1):
         return n
     else:
         return n*factorial_recursive(n-1)
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def factorial_recursive(n):
     if(n==1):
         return n
     else:
         return n*factorial_recursive(n-1)
-------------------------------------------------------------------
+#------------------------------------------------------------------
 def factorial_recursive(n):
     if(n==1):
         return n
