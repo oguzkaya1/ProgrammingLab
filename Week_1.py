@@ -1,39 +1,49 @@
 
 import random
+
 def generate_an_array(n):
-    my_array=[]
+    my_arr=[]
     for i in range(n):
         s=random.randint(0,100)
-        my_array.append(s)
-    return my_array
-#-----------------------------------------------
-for i in range(len(my_arr_1)):
-    print(i,":",my_arr_1[i])
+        my_arr.append(s)#--- s elemanını diziye ekler	cars.pop(1)	1. indexi siler - 	cars.remove("Volvo")
+    return my_arr
+
+my_arr_list=generate_an_array(5)
+print(my_arr_list)
 print("\n")
-#-----------------------------------------------
-def print_an_array(my_arr_1):
-    for item in my_arr_1:
-        print(item, end=" ")  
-#-----------------------------------------------
+
+for i in range(len(my_arr_list)):
+    print(i+1,".index :",my_arr_list[i])
+print("\n")
+
+def print_array(dizi):
+    for item in my_arr_list:
+        print(item, end=" ")
+    print("\n")
+print("FONKSIYON ile YAZDIRMA-------------")
+print_array(my_arr_list)
+
 def my_bubble_sort(my_array):
-    for i in range(len(my_arr_1)-1,0,-1):
+    for i in range(len(my_array)-1,0,-1):
+    #dizi eleman sayısı-1 den başlar. sıfıra 1 azaltarak ilerler
         for j in range(i):
-            if(my_arr_1[j]>my_arr_1[j+1]):
-                t=my_arr_1[j]
-                my_arr_1[j]=my_arr_1[j+1]
-                my_arr_1[j+1]=t
-#-----------------------------------------------
-def search_an_array(my_array,n):
+            if(my_array[j]>my_array[j+1]):
+                temp=my_array[j]
+                my_array[j]=my_array[j+1]
+                my_array[j+1]=temp
+
+print("SIRALI LISTE")            
+print_array(my_bubble_sort(my_arr_list))   
+
+
+def eleman_ara(dizi,n):
     found=False
     step=0
-    for i in range(len(my_array)):
-        if(my_array[i]==n):
+    for i in range(len(dizi)):
+        if(dizi[i]==n):
             found=True
             step=i
-    if(found==False):
-        print("\nnot found")
-    else:
-        print("\n","found:",found,"step:",step)
+    print(found,"bulunan elemanın sırası : ",step+1)
 
 
-
+eleman_ara(my_arr_list,5)
