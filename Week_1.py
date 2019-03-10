@@ -5,7 +5,7 @@ def generate_an_array(n):
     my_arr=[]
     for i in range(n):
         s=random.randint(0,100)
-        my_arr.append(s)#--- s elemanını diziye ekler	cars.pop(1)	1. indexi siler - 	cars.remove("Volvo")
+        my_arr.append(s)
     return my_arr
 
 my_arr_list=generate_an_array(5)
@@ -25,7 +25,6 @@ print_array(my_arr_list)
 
 def my_bubble_sort(my_array):
     for i in range(len(my_array)-1,0,-1):
-    #dizi eleman sayısı-1 den başlar. sıfıra 1 azaltarak ilerler
         for j in range(i):
             if(my_array[j]>my_array[j+1]):
                 temp=my_array[j]
