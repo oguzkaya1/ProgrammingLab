@@ -1,3 +1,4 @@
+import random
 class myNode(object):
   def __init__(self,v=0):
     self.val=v
@@ -28,8 +29,6 @@ def insert_1(root,node):
           root.left = node
         else:
           insert_1(root.left,node)
-
-import random
 
 def test():
   numbers=[]
